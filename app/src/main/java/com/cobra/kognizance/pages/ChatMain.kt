@@ -4,14 +4,18 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.filled.Call
+import androidx.compose.material.icons.filled.Send
+import androidx.compose.material.icons.outlined.ExitToApp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -30,9 +34,10 @@ import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.cobra.kognizance.pages.AuthViewModel
 
 @Composable
-fun CreateChatPage(modifier: Modifier = Modifier, viewModel: Chat_VM){
+fun CreateChatPage(modifier: Modifier = Modifier, viewModel: AuthViewModel){
     Column {
         CreateHeader()
         CreateMessageList(modifier = Modifier.weight(1f), messageList = viewModel.messageList)
@@ -46,13 +51,14 @@ fun CreateChatPage(modifier: Modifier = Modifier, viewModel: Chat_VM){
 fun CreateHeader(){
     Box(modifier = Modifier
         .fillMaxWidth()
-        .background(Color.Red)) {
+        .background(Color.Blue)) {
         Text(
             modifier = Modifier.padding(16.dp, 30.dp, 0.dp, 16.dp),
             text = "AppTest" ,
             color = Color.White ,
             fontSize = 24.sp
         )
+
     }
 }
 
@@ -75,7 +81,7 @@ fun CreateMessageInput(messageSend: (String) -> Unit){
     }
 
     Row(
-        modifier = Modifier.padding(8.dp),
+        modifier = Modifier.padding(20.dp),
         verticalAlignment = Alignment.CenterVertically,
     ){
         OutlinedTextField(
@@ -90,7 +96,7 @@ fun CreateMessageInput(messageSend: (String) -> Unit){
             message = ""
         }) {
             Icon(
-                imageVector = Icons.Filled.Call,
+                imageVector = Icons.Filled.Send,
                 contentDescription = "Send",
             )
         }

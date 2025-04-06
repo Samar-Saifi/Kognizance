@@ -1,10 +1,14 @@
 package com.cobra.kognizance.pages
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.ExitToApp
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.livedata.observeAsState
@@ -12,6 +16,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.cobra.kodes.CreateChatPage
 
 @Composable
 fun HomePage(modifier: Modifier = Modifier , navController: NavController , authViewModel: AuthViewModel){
@@ -24,17 +29,18 @@ fun HomePage(modifier: Modifier = Modifier , navController: NavController , auth
         }
     }
 
+    CreateChatPage(modifier = Modifier , authViewModel)
+
+
+//    val chatViewModel = ViewModelProvider(this)[Chat_VM::class.java]
     Column(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Text(text = "Home Page", fontSize = 32.sp)
 
-        TextButton(onClick = {
-            authViewModel.SignOut()
-        }) {
-            Text(text = "Sign out")
-        }
+        Text(text = "Hii....", fontSize = 32.sp)
+        Text(text = "How may I help you?", fontSize = 32.sp)
     }
+
 }

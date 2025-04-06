@@ -57,6 +57,7 @@ dependencies {
     implementation(libs.googleid)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -68,4 +69,6 @@ dependencies {
     implementation ("androidx.credentials:credentials:1.5.0")
     implementation ("androidx.credentials:credentials-play-services-auth:1.5.0")
     implementation ("com.google.android.libraries.identity.googleid:googleid:1.1.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
+
 }
