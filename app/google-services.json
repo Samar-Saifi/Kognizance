@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "749278858691",
+    "project_id": "kognizance-cobra",
+    "storage_bucket": "kognizance-cobra.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749278858691:android:fff0b5750e8ffe12b30176",
+        "android_client_info": {
+          "package_name": "com.cobra.kognizance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZMivKS-uCKrWNjwo63leOHf5hT197DQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
